@@ -10,10 +10,26 @@ const User = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "1rem",
+        alignItems: "center",
+        justifyContent: "center"
+      }}
+    >
       {isAuthenticated ? (
-        <div>
-          <h2>Bienvenido, {user.name}!</h2>
+        <div  style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+          alignItems: "center",
+          justifyContent: "center"
+        }}>
+          <h2>
+            Bienvenido, {user.name}! Su número es {user.number}
+          </h2>
           <p>
             Eres un gato: {isACat.boolean ? "si" : "nope"} y tu color es:{" "}
             {isACat.color}
@@ -23,9 +39,7 @@ const User = () => {
       ) : (
         <>
           <button onClick={handleLogin}>Iniciar sesión</button>
-          <p>
-            Eres un gato: {isACat.boolean ? "si" : "nope"}
-          </p>
+          <p>Eres un gato: {isACat.boolean ? "si" : "nope"}</p>
         </>
       )}
     </div>

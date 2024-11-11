@@ -10,10 +10,11 @@ const App = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: "100%",
-        justifyContent: "center",
+        height: "100vh",
+        justifyContent: "space-evenly",
       }}
     >
+      <h1>Aplicación con Zustand e Immer</h1>
       <div
         style={{
           display: "flex",
@@ -22,15 +23,17 @@ const App = () => {
           justifyContent: "center",
         }}
       >
-        <h1>Aplicación con Zustand e Immer</h1>
+        <h2>Contador</h2>
         <Counter />
       </div>
       <span>******************</span>
+      <h2>Login Usuario</h2>
       <div>
         <User />
       </div>
       <span>******************</span>
       <div>
+        <h2>Fetch</h2>
         <DataDisplay />
       </div>
     </section>
